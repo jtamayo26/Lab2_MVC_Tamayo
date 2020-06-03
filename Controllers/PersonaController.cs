@@ -10,8 +10,6 @@ namespace Lab2_MVC_Tamayo.Controllers
     {
         //si o si lo hizo
         //hcaer una cambio para personaasdasdasdasdasd
-        List<ClsPersona> objLista = new List<ClsPersona>();
-        // GET: Persona
         public ActionResult Index()
         {
             //Instanciar para el objeto 1
