@@ -8,7 +8,7 @@ namespace Lab2_MVC_Tamayo.Controllers
 {
     public class PersonaController : Controller
     {
-
+        //si o si lo hizo
         //hcaer una cambio para persona
         List<ClsPersona> objLista = new List<ClsPersona>();
         // GET: Persona
