@@ -1,0 +1,62 @@
+﻿@model Lab2_MVC_Tamayo.Models.ClsBisiesto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Visualizar</title>
+</head>
+<body>
+    <div>
+        <h1> Años Bisiestos y No Bisiestos</h1>
+        <br />
+        <br />
+        @{
+            Model.bisiesto = "";
+            Model.nobisiesto = "";
+            Model.resultado = "";
+
+            for (int i = Model.inicio; i <= Model.termino; i++)
+            {
+                Model.todo += ", ";
+                if (i % 400 == 0)
+                {
+                    Model.bisiesto = Model.bisiesto + i + "\n";
+                }
+                else if (i % 400 == 0 & i % 100 != 0)
+                {
+                    Model.bisiesto = i + "\n";
+                }
+                else
+                {
+                    Model.nobisiesto += i + "\n";
+                }
+            }
+
+            if (Request["Anio"].Equals("Bisiestos"))
+            {
+                Model.resultado = Model.bisiesto;
+            }
+            if (Request["Anio"].Equals("NoBisiestos"))
+            {
+                Model.resultado = Model.nobisiesto;
+            }
+            if (Request["Anio"].Equals("Ambos"))
+            {
+                Model.resultado = Model.todo;
+            }
+        }
+
+        <h2><strong>@Request["Anio"]</strong></h2>
+        <div>
+            <strong> @Model.resultado</strong>
+        </div>
+
+        <a href="javascript:history.back()"> <<  retornar</a>
+    </div>
+</body>
+</html>

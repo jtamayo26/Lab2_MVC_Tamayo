@@ -1,0 +1,31 @@
+﻿@model Lab2_MVC_Tamayo.Models.ClsBillete
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1>Cajero de Billetes</h1>
+        <br /><br />
+        <div>
+            @using (Html.BeginForm("Visualizar", "Billete", FormMethod.Post))
+            {
+                <div>
+                    @Html.LabelFor(model => model.monto, "Ingrese monto: ")
+                    @Html.TextBoxFor(model => model.monto)
+                </div>
+                <br /><br />
+                <input type="submit" value="Calcular" />
+                <br /><br />
+            }
+        </div>
+    </div>
+</body>
+</html>

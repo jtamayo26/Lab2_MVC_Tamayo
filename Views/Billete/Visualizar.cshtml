@@ -1,0 +1,26 @@
+﻿@model Lab2_MVC_Tamayo.Models.ClsBillete
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Visualizar</title>
+</head>
+<body>
+    <div> 
+        <h1>Cajero de billetes</h1>
+        <div>
+            <label>Monto: </label> @Model.monto <br /><br />
+            <label>Billete de 100: </label> @Model.b100<br />
+            <label>Billete de 50: </label>@Model.b50<br />
+            <label>Billete de 20: </label>@Model.b20<br />
+            <label>Billete de 10: </label>@Model.b10<br />
+        </div>
+    </div>
+    <a href="Index"><< Retornar al formulario >></a>
+</body>
+</html>
