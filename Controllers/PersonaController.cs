@@ -8,6 +8,8 @@ namespace Lab2_MVC_Tamayo.Controllers
 {
     public class PersonaController : Controller
     {
+
+        //hcaer una cambio para persona
         List<ClsPersona> objLista = new List<ClsPersona>();
         // GET: Persona
         public ActionResult Index()
