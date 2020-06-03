@@ -15,6 +15,10 @@ namespace Lab2_MVC_Tamayo.Controllers
         {
             return View();
         }
+        public ActionResult SuperIndex()
+        {
+            return View();
+        }
 
         public ActionResult Visualizar(ClsBillete objBillete)
         {
